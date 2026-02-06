@@ -33,10 +33,7 @@ const startServer = async () => {
             res.send("Welcome to Linkdin Clone Backend");
         });
 
-        // register -> (POST) http://localhost:4000/api/register
-        app.listen(process.env.PORT, () => {
-            console.log('Server is running on port ', process.env.PORT);
-        });
+        module.exports = app;
     } catch (err) {
         console.log("MongoDB connection error:", err.message);
         process.exit(1);
